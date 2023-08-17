@@ -6,6 +6,11 @@ build-backend = "hatchling.build"
 name = "hub_py"
 version = "0.0.2"
 requires-python = ">=3.8"
+dependencies = [
+    'blake3==0.3.3',
+    'grpcio==1.53.0',
+    'grpcio-tools==1.53.0'
+]
 
 [tool.pytest.ini_options]
 addopts = [
