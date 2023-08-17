@@ -16,7 +16,7 @@ from hub_py.protobuf_patch import patched_serialize_to_string
 
 def _make_message(data: MessageData, signer: Signer) -> Message:
     # Set the timestamp if it's not provided
-    if data.timestamp is None:
+    if not data.timestamp:
         data.timestamp = get_farcaster_time()
     # TODO: Remove patch and use data.SerializeToString()
     data_bytes = patched_serialize_to_string(data)
